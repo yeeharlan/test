@@ -1,0 +1,1 @@
+<a href="javascript:void(0) " onclick="confirm( 'Are you sure to delete this address? ',function(){location.href='/address/del/id/956' })">Delete</a>

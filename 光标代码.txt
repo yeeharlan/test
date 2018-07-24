@@ -1,0 +1,44 @@
+if ($('.length').length > 0 && $('.width').length > 0 && $('.height').length > 0 && $('.weight').length > 0) {
+
+        var thisindex = 0;
+        $('.length').each(function() {
+          $(this).index();
+          returnvalue = true;
+          var thislength = $.trim($(this).val());
+          var thiswidth = $.trim($('.width').eq(thisindex).val());
+          var thisheight = $.trim($('.height').eq(thisindex).val());
+          var thisweight = $.trim($('.weight').eq(thisindex).val());
+          if($('.boxmai').length > 0){
+          	var thisboxmai = $.trim($('.boxmai').eq(thisindex).val());
+          if (thisboxmai <= 0 || thisboxmai == '') {
+              $('.boxmai').eq(thisindex).focus();
+              returnvalue = false;
+              return false;
+            }
+          }
+          if (thislength <= 0 || thislength == '') {
+            $(this).focus();
+            returnvalue = false;
+            return false;
+          }
+          if (thiswidth <= 0 || thiswidth == '') {
+            $('.width').eq(thisindex).focus();
+            returnvalue = false;
+            return false;
+          }
+          if (thisheight <= 0 || thisheight == '') {
+            $('.height').eq(thisindex).focus();
+            returnvalue = false;
+            return false;
+          }
+          if (thisweight <= 0 || thisweight == '') {
+            $('.weight').eq(thisindex).focus();
+            returnvalue = false;
+            return false;
+          }
+          thisindex++;
+        });
+        if (typeof(returnvalue) != 'undefined' && !returnvalue) {
+          return false;
+        }
+      }

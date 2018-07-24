@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title> 
+</head>
+
+<body>
+<div id=content>
+<script type="text/javascript">
+
+    function Openwindow(url,width,height) {
+
+            var l = (screen.width - width) / 2; 
+            var t = (screen.height - height) / 2; 
+            var s = 'width=' + width + ', height=' + height + ', top=' + t + ', left=' + l; 
+            s += ', toolbar=no, scrollbars=yes, menubar=no, location=no, resizable=no,location=no'; 
+            window.open(url, 'oWin', s); 
+}
+</script>
+		<a href="javascript:void(0)" onclick="Openwindow('http://www.baidu.com','600','450');">Open</a>
+</div>
+
+
+</body>
+</html>
+

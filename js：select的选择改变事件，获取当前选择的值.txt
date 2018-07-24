@@ -1,0 +1,18 @@
+//获取当前选择的值
+<select id="sltLB" name="sltLB" onchange='btnChange(this[selectedIndex].value);'>
+<option value="1" selected="selected">全校</option>
+<option value="2">教师</option>
+<option value="3">学生</option>
+</select>
+
+ 
+
+//下拉框选择改变事件
+function btnChange(values) {
+//如果选中的是学生，显示第二个下拉框
+if (values == "3") {
+document.getElementById('sltXS').style.display = '';
+}
+else {
+document.getElementById('sltXS').style.display = 'none';
+}

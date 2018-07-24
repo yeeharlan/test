@@ -1,0 +1,8 @@
+显示系统版本
+#cat /etc/redhat-release
+
+查看系统是64位还是32位
+#getconf LONG_BIT
+
+查看已安装的CentOS版本信息：
+#cat /proc/version

@@ -1,0 +1,26 @@
+---- 例子 ----
+		#添加
+		$db = Zend_Registry::get('db');
+		$table = 'other_fee';
+		return $db -> insert($table, $row);
+
+		#修改
+		$db = Zend_Registry::get('db');
+		$table = 'other_fee';
+		$where = $db -> quoteInto('id = ?', $id);
+		return $db -> update($table, $row, $where);
+
+		#删除
+		$db = Zend_Registry::get('db');
+		$table = 'other_fee';
+		$where = $db -> quoteInto('id = ?', $id);
+		return $db -> delete($table, $where);
+
+		#条件查询
+		$db = Zend_Registry :: get('db');
+		$select = $db->select();
+		$select->from('ship_type', '*');
+		$select->where('st_id  = ?', $id);
+                $select->where("status  != '0'");
+		$sql = $select->__toString();
+		return  $db->fetchRow($sql);
